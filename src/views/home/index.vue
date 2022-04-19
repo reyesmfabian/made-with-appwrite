@@ -180,7 +180,7 @@ import { useMeta } from "vue-meta";
 const openProjects = ref<Project[]>([]);
 const commercialProjects = ref<Project[]>([]);
 
-//INFORMACION PARA EL SEO DE LA PAGINA
+// INFORMATION FOR THE SEO OF THE SITE
 useMeta({
   title: "Made With Appwrite | Appwrite",
   meta: [
