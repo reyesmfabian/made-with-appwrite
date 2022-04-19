@@ -13,6 +13,7 @@ console.log("==============================================\n".green);
 console.log("Made With Appwrite Server Generate Script\n".green);
 console.log("Requirements:".green);
 console.log("* Appwrite Instance With 0.11.1 Version".green);
+console.log("* SMTP Service Enabled".green);
 console.log("* Appwrite Project ID".green);
 console.log("* Appwrite Project Endpoint URL".green);
 console.log("* Site URL set in Platforms (console)".green);
@@ -104,10 +105,10 @@ inquirer.prompt(questions).then(async (answers) => {
   client.setEndpoint(api_endpoint).setProject(project_id).setKey(api_key);
   try {
     console.log("Creating Admin Team.....".green);
-    const adminTeam = await teams.create("admins1");
+    const adminTeam = await teams.create("admins");
     console.log("Creating Projects Collection.....".green);
     const projectsCollection = await database.createCollection(
-      "Projects1",
+      "Projects",
       ["*"],
       ["*"],
       [
@@ -195,7 +196,7 @@ inquirer.prompt(questions).then(async (answers) => {
     );
     console.log("Creating Admins Collection.....".green);
     const adminsCollection = await database.createCollection(
-      "Admins1",
+      "Admins",
       ["*"],
       [`team:${adminTeam.$id}`],
       [
