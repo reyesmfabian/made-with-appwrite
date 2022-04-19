@@ -30,7 +30,7 @@ pinia.use(
 createApp(App)
   .use(ElementPlus)
   .use(pinia)
-  .use(router)
   .use(metaManager)
+  .use(router)
   .mount("#app");
 import "bootstrap/dist/js/bootstrap.js";
