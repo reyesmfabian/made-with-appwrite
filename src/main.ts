@@ -6,11 +6,16 @@ import ElementPlus from "element-plus";
 import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
+import { createMetaManager } from "vue-meta";
 import { createPinia } from "pinia";
 import { createPersistedStatePlugin } from "pinia-plugin-persistedstate-2";
 import SecureLS from "secure-ls";
 const ls = new SecureLS();
 
+
+const metaManager = createMetaManager(false, {
+  meta: { tag: "meta", nameless: true },
+});
 const pinia = createPinia();
 pinia.use(
   createPersistedStatePlugin({
@@ -26,5 +31,6 @@ createApp(App)
   .use(ElementPlus)
   .use(pinia)
   .use(router)
+  .use(metaManager)
   .mount("#app");
 import "bootstrap/dist/js/bootstrap.js";
