@@ -10,6 +10,9 @@ module.exports = {
   },
   pwa: {
     name: "Made With Appwrite",
+    workboxOptions: {
+      exclude: [/_redirects/],
+    },
     themeColor: "#4A90E2",
   },
   configureWebpack: {

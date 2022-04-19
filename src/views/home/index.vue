@@ -175,82 +175,10 @@ import NavBar from "@/components/NavBar.vue";
 import { onMounted, ref } from "vue";
 import { Project, Convert } from "@/models/Project";
 import Server from "../../services/server";
-import { useMeta } from "vue-meta";
 
 const openProjects = ref<Project[]>([]);
 const commercialProjects = ref<Project[]>([]);
 
-// INFORMATION FOR THE SEO OF THE SITE
-useMeta({
-  title: "Made With Appwrite | Appwrite",
-  meta: [
-    {
-      name: "description",
-      content:
-        "An accurate and verified list of production-ready projects made with Appwrite",
-    },
-    {
-      name: "robots",
-      content: "index, follow",
-    },
-    {
-      name: "googlebot",
-      content:
-        "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    },
-    {
-      property: "og:title",
-      content: "Made With Appwrite | Appwrite",
-    },
-    {
-      name: "bingbot",
-      content:
-        "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    },
-    {
-      property: "og:locale",
-      content: "en",
-    },
-    {
-      property: "og:type",
-      content: "website",
-    },
-    {
-      property: "og:description",
-      content:
-        "An accurate and verified list of production-ready projects made with Appwrite",
-    },
-    {
-      property: "og:url",
-      content: "https://madewithappwrite.com/",
-    },
-    {
-      property: "og:site_name",
-      content: "Made With Appwrite | Appwrite",
-    },
-    {
-      property: "og:image",
-      content: "https://madewithappwrite.com/img/ogimage.png",
-    },
-    { property: "og:image:width", content: "1200" },
-    {
-      property: "og:image:height",
-      content: "630",
-    },
-    {
-      name: "twitter:card",
-      content: "summary_large_image",
-    },
-    {
-      name: "twitter:title",
-      content: "Made With Appwrite | Appwrite",
-    },
-    {
-      name: "twitter:image",
-      content: "https://madewithappwrite.com/img/ogimage.png",
-    },
-  ],
-});
 onMounted(async () => {
   try {
     openProjects.value = await Server.getOpenProjects();
