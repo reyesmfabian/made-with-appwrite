@@ -20,7 +20,7 @@
         <div
           v-for="project in openProjects"
           :key="project.$id"
-          class="col col-12 col-xl-2 mt-3"
+          class="col col-12 col-md-6 col-lg-4 col-xl-3 mt-3"
         >
           <el-card
             shadow="always"
@@ -96,7 +96,7 @@
         <div
           v-for="project in commercialProjects"
           :key="project.$id"
-          class="col col-12 col-xl-2 mt-3"
+          class="col col-12 col-md-6 col-lg-4 col-xl-3 mt-3"
         >
           <el-card
             shadow="always"
