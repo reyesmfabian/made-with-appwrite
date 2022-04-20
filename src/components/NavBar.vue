@@ -633,7 +633,7 @@ async function submitProject(formEl: FormInstance | undefined) {
       }
       formEl.resetFields();
       ElMessageBox.alert(
-        "The project has been successfully submitted",
+        "The project has been successfully submitted, a team member will review it for approval.",
         "Success",
         {
           confirmButtonText: "OK",
