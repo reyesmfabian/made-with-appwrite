@@ -48,7 +48,7 @@
                   class="col col-5"
                   type="text"
                   @click="showService(project.homepage)"
-                  ><i class="fa-solid fa-link fa-2x"></i
+                  ><i class="fa-solid fa-earth-americas fa-2x"></i
                 ></el-button>
               </div>
               <div class="col-6 text-center" v-if="project.repository">
@@ -124,7 +124,7 @@
                   class="col col-5"
                   type="text"
                   @click="showService(project.homepage)"
-                  ><i class="fa-solid fa-link fa-2x"></i
+                  ><i class="fa-solid fa-earth-americas fa-2x"></i
                 ></el-button>
               </div>
               <div class="col-6 text-center" v-if="project.repository">
